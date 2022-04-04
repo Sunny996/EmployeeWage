@@ -1,38 +1,41 @@
 package main;
 
 public class EmployeeWage {
-    public final int IS_PRESENT=1;
-    public final int IS_ABSENT=0;
-    public final int WAGE_PER_HOUR=20;
-    public final int FULL_DAY_HOUR=8;
-    public final int PART_TIME_HOUR = 4;
-    public final int IS_PART_TIME = 2;
-    public final int DAYS_PER_MONTH = 20;
-    public final int HOURS_PER_MONTH = 100;
+    public static final int IS_PRESENT = 1;
+    public static final int IS_PART_TIME = 2;
+    public static final int FULL_DAY_HOUR = 8;
+    public static final int PART_TIME_HOUR = 4;
+    public final int empRate;
+    public final int daysPerMonth;
+    public final int hoursPerMonth;
+    public final String company;
+
+    public EmployeeWage(int empRate, int daysPerMonth, int hoursPerMonth) {
+        this.company = "DMart";
+        this.empRate = empRate;
+        this.daysPerMonth = daysPerMonth;
+        this.hoursPerMonth = hoursPerMonth;
+    }
 
     public int empDailyWage() {
         int totalWage = 0;
         int totalWorkingDays = 0;
         int totalWorkingHours = 0;
-        while (totalWorkingDays < DAYS_PER_MONTH && totalWorkingHours + 4 < HOURS_PER_MONTH) {
+        while (totalWorkingDays < this.daysPerMonth && totalWorkingHours + 4 < this.hoursPerMonth) {
             switch ((int) (Math.random() * 10) % 3) {
                 case IS_PRESENT:
-                    totalWage += WAGE_PER_HOUR * FULL_DAY_HOUR;
+                    totalWage += this.empRate * FULL_DAY_HOUR;
                     totalWorkingDays++;
-                    totalWorkingHours += 8;
+                    totalWorkingHours += FULL_DAY_HOUR;
                     break;
                 case IS_PART_TIME:
-                    totalWage += WAGE_PER_HOUR * PART_TIME_HOUR;
+                    totalWage += this.empRate * PART_TIME_HOUR;
                     totalWorkingDays++;
-                    totalWorkingHours += 4;
+                    totalWorkingHours += PART_TIME_HOUR;
                     break;
-
             }
         }
-        System.out.println("Employee Wage Per Month in 100 hours or 20 days is " + totalWage);
-        System.out.println("Days " + totalWorkingDays);
-        System.out.println("Hours " + totalWorkingHours);
+        System.out.println("Employee Wage Per Month in 100 hours or 20 days for the company " + this.company + " is " + totalWage);
         return totalWage;
-
     }
 }

@@ -2,7 +2,7 @@ package main;
 
 public class EmployeeWageTest {
     public static void main(String[] args) {
-        EmployeeWage empWage=new EmployeeWage();
-        empWage.empDailyWage();
+        EmployeeWage dMart = new EmployeeWage(20, 2, 10);
+        dMart.empDailyWage();
     }
 }
