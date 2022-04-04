@@ -8,7 +8,7 @@ public class EmployeeWage {
     public static final int PART_TIME_HOUR = 4;
 
 
-    public int empDailyWage(int daysPerMonth, int hoursPerMonth, int empRate) {
+    public int empDailyWage(String company, int daysPerMonth, int hoursPerMonth, int empRate) {
         int totalWage = 0;
         int totalWorkingDays = 0;
         int totalWorkingHours = 0;
@@ -27,7 +27,7 @@ public class EmployeeWage {
 
             }
         }
-        System.out.println("Employee Wage Per Month in 100 hours or 20 days is " + totalWage);
+        System.out.println("Employee Wage Per Month in 100 hours or 20 days for "+company+" is " + totalWage);
         System.out.println("Days " + totalWorkingDays);
         System.out.println("Hours " + totalWorkingHours);
         return totalWage;
