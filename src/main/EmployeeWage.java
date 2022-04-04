@@ -1,23 +1,25 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EmployeeWage implements EmployeeWageInterface {
 
     public int noOfCompanies = 0;
-    public CompanyEmpWage[] companyEmpWageArray;
+    public List<CompanyEmpWage> companyEmpWageArray;
 
     public EmployeeWage() {
-        companyEmpWageArray = new CompanyEmpWage[10];
+        companyEmpWageArray = new ArrayList<>();
     }
 
     public void addCompanyEmpWage(String company, int empRate, int daysPerMonth, int hoursPerMonth) {
-        companyEmpWageArray[noOfCompanies] = new CompanyEmpWage(company, empRate, daysPerMonth, hoursPerMonth);
-        noOfCompanies++;
+        companyEmpWageArray.add( new CompanyEmpWage(company, empRate, daysPerMonth, hoursPerMonth));
     }
 
     public void calculateCompanyEmpWage() {
         for (int index = 0; index < noOfCompanies; index++) {
-            companyEmpWageArray[index].setTotalEmpWage(empDailyWage(companyEmpWageArray[index]));
-            System.out.println(companyEmpWageArray[index]);
+            companyEmpWageArray.get(index).setTotalEmpWage(empDailyWage(companyEmpWageArray.get(index)));
+            System.out.println(companyEmpWageArray.get(index));
         }
     }
 
