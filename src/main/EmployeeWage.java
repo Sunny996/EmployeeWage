@@ -10,8 +10,8 @@ public class EmployeeWage {
     public final int hoursPerMonth;
     public final String company;
 
-    public EmployeeWage(int empRate, int daysPerMonth, int hoursPerMonth) {
-        this.company = "DMart";
+    public EmployeeWage(String company, int empRate, int daysPerMonth, int hoursPerMonth) {
+        this.company = company;
         this.empRate = empRate;
         this.daysPerMonth = daysPerMonth;
         this.hoursPerMonth = hoursPerMonth;
