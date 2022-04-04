@@ -10,11 +10,16 @@ public class EmployeeWage {
 
     public int empDailyWage(){
         int dailyWage=0;
-        int empPresent=(int)(Math.random()*10)%3;
-        if(empPresent==IS_PRESENT)
-            dailyWage=WAGE_PER_HOUR*FULL_DAY_HOUR;
-        else if(empPresent==IS_PART_TIME)
-            dailyWage=WAGE_PER_HOUR*PART_TIME_HOUR;
+        int empPresentSwitch=(int)(Math.random()*10)%3;
+        switch(empPresentSwitch){
+            case IS_PRESENT:
+                dailyWage=WAGE_PER_HOUR*FULL_DAY_HOUR;
+                break;
+            case IS_PART_TIME:
+                dailyWage=WAGE_PER_HOUR*PART_TIME_HOUR;
+                break;
+
+        }
         System.out.println("Daily Wage is "+dailyWage);
         return dailyWage;
     }
