@@ -1,10 +1,6 @@
 package main;
 
-public class EmployeeWage {
-    public static final int IS_PRESENT = 1;
-    public static final int IS_PART_TIME = 2;
-    public static final int FULL_DAY_HOUR = 8;
-    public static final int PART_TIME_HOUR = 4;
+public class EmployeeWage implements EmployeeWageInterface {
 
     public int noOfCompanies = 0;
     public CompanyEmpWage[] companyEmpWageArray;
