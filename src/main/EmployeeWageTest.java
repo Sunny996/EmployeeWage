@@ -2,8 +2,9 @@ package main;
 
 public class EmployeeWageTest {
     public static void main(String[] args) {
-        EmployeeWage employeeWage=new EmployeeWage();
-        employeeWage.empDailyWage("DMart",20,100,20);
-        employeeWage.empDailyWage("Reliance",25,50,30);
+        EmployeeWage dMart=new EmployeeWage("DMart",20,2,10);
+        dMart.empDailyWage();
+        EmployeeWage reliance=new EmployeeWage("Reliance",25,10,20);
+        reliance.empDailyWage();
     }
 }
