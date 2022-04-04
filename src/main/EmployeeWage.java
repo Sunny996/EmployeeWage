@@ -27,7 +27,7 @@ public class EmployeeWage {
 
             }
         }
-        System.out.println("Employee Wage Per Month in 100 hours or 20 days is " + totalWage);
+        System.out.println("Employee Wage Per Month is " + totalWage);
         System.out.println("Days " + totalWorkingDays);
         System.out.println("Hours " + totalWorkingHours);
         return totalWage;
