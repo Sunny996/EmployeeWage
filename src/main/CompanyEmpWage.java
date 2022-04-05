@@ -1,15 +1,19 @@
 package main;
 
+import java.util.ArrayList;
+
 public class CompanyEmpWage {
     public final int empRate;
     public final int daysPerMonth;
     public final int hoursPerMonth;
     public final String company;
     public int totalEmpWage;
+    ArrayList<Integer> dailyWageList=new ArrayList<>();
 
-    public int getTotalEmpWage() {
-        return totalEmpWage;
+    public void setDailyWageList(ArrayList<Integer> dailyWageList){
+        this.dailyWageList=dailyWageList;
     }
+
 
     public void setTotalEmpWage(int totalEmpWage) {
         this.totalEmpWage = totalEmpWage;
