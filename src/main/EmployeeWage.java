@@ -45,10 +45,7 @@ public class EmployeeWage implements EmployeeWageInterface {
             }
         }
         companyEmpWage.setTotalEmpWage(totalWage);
-        System.out.println("Days " + totalWorkingDays);
-        System.out.println("Hours " + totalWorkingHours);
-        System.out.println("Total Wage "+companyEmpWage.totalEmpWage);
-        System.out.println(companyEmpWage.dailyWageList);
+        System.out.println("The company "+companyEmpWage.company+ " has a Total employee Wage of "+companyEmpWage.totalEmpWage);
         return companyEmpWage.totalEmpWage;
     }
 }
